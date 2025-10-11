@@ -34,4 +34,21 @@ CUDA_VISIBLE_DEVICES=0 python predict_PHATNet_NHHaze20_to_NHHaze21.py
 **We also provide the haze-transferred results in "[Here](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)", such as "PHATNet_NHHaze20_to_NHHaze21".** <br>
 **Please unzip them into './dataset'**
 
-## Training for Domain Adaptation (FocalNet)
+## Domain Adaptation (FocalNet) Other methods will be released soon.
+Take NHHaze21 dataset for example. <br>
+Download "[NHHaze21](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
+Unzip and put it into './datasets' as: './datasets/NHHaze21'
+* Run the following command for domain adaptation
+```
+cd FocalNet 
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 train_focalnet_Test_Time_NHHaze21.py
+```
+* Run the following command for testing
+```
+CUDA_VISIBLE_DEVICES=0 python predict_focalnet_NHHaze_21.py
+```
+* Run the following command for evaluation
+```
+CUDA_VISIBLE_DEVICES=0 python evaluate_NHHaze21.py
+```
+
