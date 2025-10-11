@@ -36,7 +36,7 @@ CUDA_VISIBLE_DEVICES=0 python predict_PHATNet_NHHaze20_to_NHHaze21.py
 **We also provide the haze-transferred results in "[Here](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)", such as "PHATNet_NHHaze20_to_NHHaze21".** <br>
 **Please unzip them into './dataset'**
 
-## Domain Adaptation (FocalNet). Other methods will be released soon.
+## Domain Adaptation (FocalNet). 
 Take NHHaze21 dataset for example. <br>
 Download "[NHHaze21](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
 Unzip and put it into './datasets' as: './datasets/NHHaze21' <br>
