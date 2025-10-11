@@ -24,7 +24,9 @@ CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 tra
 ## Testing (PHATNet)
 Take NHHaze21 dataset for example. <br>
 Download "[NHHaze21](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
-Unzip NHHaze21.zip and put it into './datasets' as: './datasets/NHHaze21'
+Unzip NHHaze21.zip and put it into './datasets' as: './datasets/NHHaze21' <br>
+We also provide weights "[PHATNet_NHHaze20.pth](https://drive.google.com/drive/folders/15FCWSjL79uNeM5lieVMcwEvGj7AIbzVd?usp=drive_link)"
+
 * Run the following command for testing (haze-transfer)
 ```
 cd PHATNet 
@@ -37,7 +39,9 @@ CUDA_VISIBLE_DEVICES=0 python predict_PHATNet_NHHaze20_to_NHHaze21.py
 ## Domain Adaptation (FocalNet). Other methods will be released soon.
 Take NHHaze21 dataset for example. <br>
 Download "[NHHaze21](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
-Unzip and put it into './datasets' as: './datasets/NHHaze21'
+Unzip and put it into './datasets' as: './datasets/NHHaze21' <br>
+We also provide weights "[focalnet_PHATNet_NHHaze20_to_NHHaze21.pth](https://drive.google.com/drive/folders/1svtDCi9r-IiSfyeN8BOFSt3HX2p48neg?usp=drive_link)"
+
 * Run the following command for domain adaptation
 ```
 cd FocalNet 
