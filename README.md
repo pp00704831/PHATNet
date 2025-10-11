@@ -14,15 +14,22 @@ pip install opencv-python tqdm glog scikit-image tensorboardX thop
 
 ## Training (PHATNet)
 Download "[NHHaze20](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
-Unzip NHHaze20.zip and put it into './datasets' as: './datasets/NH-Haze'
+Unzip NHHaze20.zip and put it into './datasets' as: './datasets/NHHaze20'
 * Run the following command for training
 ```
 cd PHATNet 
-CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 train.py
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 train_PHATNet_NHHaze20.py
 ```
 
+## Testing (PHATNet)
+Take NHHaze21 dataset for example. <br>
+Download "[NHHaze21](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
+Unzip NHHaze21.zip and put it into './datasets' as: './datasets/NHHaze21'
+* Run the following command for testing (haze-transfer)
+```
+cd PHATNet 
+CUDA_VISIBLE_DEVICES=0 python predict_PHATNet_NHHaze20_to_NHHaze21.py
+```
 
-
-
-
-## Testing
+**We also provide the haze-transferred results in "[Here](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)", such as "PHATNet_NHHaze20_to_NHHaze21".** <br>
+**Please unzip them into './dataset'**
