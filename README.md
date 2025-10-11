@@ -12,7 +12,17 @@ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cud
 pip install opencv-python tqdm glog scikit-image tensorboardX thop
 ```
 
-## Training
+## Training (PHATNet)
+Download "[NHHaze20](https://drive.google.com/drive/folders/16ykFSBYFrEfssnVxVgz-yyI4iD8cT513?usp=drive_link)" dataset. <br>
+Unzip NHHaze20.zip and put it into './datasets' as: './datasets/NH-Haze'
+* Run the following command for training
+```
+cd PHATNet 
+CUDA_VISIBLE_DEVICES=0 python -m torch.distributed.launch --nproc_per_node=1 train.py
+```
+
+
+
 
 
 ## Testing
