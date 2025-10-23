@@ -56,3 +56,15 @@ CUDA_VISIBLE_DEVICES=0 python predict_focalnet_NHHaze_21.py
 CUDA_VISIBLE_DEVICES=0 python evaluate_NHHaze21.py
 ```
 
+## Citation
+```
+@InProceedings{Tsai_2025_ICCV,
+    author    = {Tsai, Fu-Jen and Peng, Yan-Tsung and Lin, Yen-Yu and Lin, Chia-Wen},
+    title     = {PHATNet: A Physics-guided Haze Transfer Network for Domain-adaptive Real-world Image Dehazing},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {5591-5600}
+}
+```
+
